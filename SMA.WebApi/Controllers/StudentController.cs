@@ -14,14 +14,14 @@ public class StudentController : Controller
         // ... Diğer örnek öğrenciler
     };
 
-    // GET: api/SMA
+    // GET: api/SMP
     [HttpGet]
     public IActionResult Get()
     {
         return Ok(students);
     }
 
-    // GET: api/SMA/5
+    // GET: api/SMP/5
     [HttpGet("{id}", Name = "Get")]
     public IActionResult Get(int id)
     {
@@ -33,7 +33,7 @@ public class StudentController : Controller
         return Ok(student);
     }
 
-    // POST: api/SMA
+    // POST: api/SMP
     [HttpPost]
     public IActionResult Post([FromBody] Student student)
     {
@@ -46,7 +46,7 @@ public class StudentController : Controller
         return CreatedAtAction(nameof(Get), new { id = student.Id }, student);
     }
 
-    // PUT: api/SMA/5
+    // PUT: api/SMP/5
     [HttpPut("{id}")]
     public IActionResult Put(int id, [FromBody] Student updatedStudent)
     {
@@ -62,7 +62,7 @@ public class StudentController : Controller
         return NoContent();
     }
 
-    // DELETE: api/SMA/5
+    // DELETE: api/SMP/5
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
